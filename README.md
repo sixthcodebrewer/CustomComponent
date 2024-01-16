@@ -1,6 +1,106 @@
+# Specifications
+
+This project implements a dynamic input field with the following specifications:
+
+1. **Interactive Input Field:**
+   - Clicking on the input field triggers the display of a list of items.
+
+2. **Dynamic Filtering:**
+   - As you type in the input field, the list dynamically filters to show only the items that match the entered text.
+
+3. **Selectable Items:**
+   - Clicking on an item in the list turns it into a chip at the top of the input field.
+
+4. **Automatic Adjustment:**
+   - The input field adjusts automatically as items are selected, ensuring a smooth user experience.
+
+5. **Chip Removal:**
+   - Each chip at the top has an "X" icon.
+   - Clicking the "X" icon removes the corresponding chip and adds the item back to the list.
+
+6. **Exclusion from List:**
+   - Once an item becomes a chip, it is excluded from the list to prevent duplicate selections.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Certainly! Here's a simple README template for the API used in your project:
+
+# Random User API
+
+This project utilizes the [Random User API](https://randomuser.me/) to fetch random user data for various functionalities, such as displaying user profiles in an input component.
+
+## Overview
+
+The Random User API is a free online service that provides randomly generated user data. It can be used for various purposes, including testing, user profile creation, and data visualization.
+
+## Getting Started
+
+To start using the Random User API in your project, you can make HTTP requests to the following endpoint:
+
+```
+https://randomuser.me/api/
+```
+
+### Example Request
+
+Here is an example of making a GET request to the API to retrieve a random user:
+
+```javascript
+fetch('https://randomuser.me/api/')
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error('Error fetching random user:', error);
+  });
+```
+
+### Query Parameters
+
+You can include query parameters to customize the API response. For example, to get 50 random users, you can use the following URL:
+
+```
+https://randomuser.me/api/?results=50
+```
+
+## Response Format
+
+The API response is in JSON format and contains an object with the following structure:
+
+```json
+{
+  "results": [
+    {
+      "gender": "...",
+      "name": {
+        "title": "...",
+        "first": "...",
+        "last": "..."
+      },
+      "location": {
+        // ...
+      },
+      "email": "...",
+      // ... other user details
+    }
+    // ... additional users if results > 1
+  ],
+  "info": {
+    "seed": "...",
+    "results": 1,
+    "page": 1,
+    "version": "..."
+  }
+}
+```
+
+## Additional Information
+
+For more details about the available query parameters, response format, and usage guidelines, refer to the [Random User API documentation](https://randomuser.me/documentation).
 
 ## Available Scripts
 
@@ -29,42 +129,3 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
